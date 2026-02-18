@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-
+    <footer className="bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 text-gray-300">
+      
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+        
         {/* Project Info */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">
-            CertiVerify
+            DigiCert System
           </h2>
           <p className="text-sm leading-6">
-            A secure Digital Certificate Issuance & Verification System 
-            designed to provide trusted and tamper-proof certification 
-            for institutions and users.
+            A secure digital platform for issuing and verifying certificates 
+            with real-time authentication and QR-based validation.
           </p>
         </div>
 
@@ -24,51 +24,65 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/" className="hover:text-blue-400">Home</Link>
+              <Link to="/" className="hover:text-indigo-400 transition">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-400">About</Link>
+              <Link to="/login" className="hover:text-indigo-400 transition">
+                Login
+              </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-400">Services</Link>
+              <Link to="/signup" className="hover:text-indigo-400 transition">
+                Register
+              </Link>
             </li>
             <li>
-              <Link to="/login" className="hover:text-blue-400">Login</Link>
+              <Link to="/verify" className="hover:text-indigo-400 transition">
+                Verify Certificate
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* Features */}
+        {/* Modules */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
-            Features
+            Modules
           </h3>
           <ul className="space-y-2 text-sm">
-            <li>✔ Secure Certificate Issuance</li>
-            <li>✔ Instant Verification</li>
-            <li>✔ QR Code Validation</li>
-            <li>✔ Role-Based Access</li>
+            <li>Admin Dashboard</li>
+            <li>Institution Panel</li>
+            <li>Certificate Generator</li>
+            <li>Verification System</li>
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Contact
           </h3>
-          <p className="text-sm">Email: support@certiverify.com</p>
-          <p className="text-sm mt-2">Phone: +91 9876543210</p>
-          <p className="text-sm mt-2">Location: India</p>
+          <p className="text-sm">Email: support@digicert.com</p>
+          <p className="text-sm mt-2">Phone: +91 98765 43210</p>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-4 text-xl">
+            <span className="hover:text-indigo-400 cursor-pointer">🌐</span>
+            <span className="hover:text-indigo-400 cursor-pointer">🔗</span>
+            <span className="hover:text-indigo-400 cursor-pointer">📘</span>
+          </div>
         </div>
 
       </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm">
-        © {new Date().getFullYear()} CertiVerify. All rights reserved.
-        <br />
-        Developed by Pravallika
+      {/* Bottom Line */}
+      <div className="border-t border-gray-700 text-center py-6 text-sm">
+        © {new Date().getFullYear()} Digital Certification Issuance and Verification System. 
+        All Rights Reserved.
       </div>
+
     </footer>
   );
 };
