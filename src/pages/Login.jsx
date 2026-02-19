@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 
 const Login = () => {
